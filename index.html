@@ -1,0 +1,1296 @@
+
+
+	<!DOCTYPE html>
+
+
+<html >
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <title>4Dnk's Forum</title>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+		<script>
+			try {
+				if(typeof(Storage) !== "undefined" && sessionStorage.getItem("loadThemeEditor")) {
+					var showThemeLoader = {};
+					showThemeLoader.loadingThemeEditor = 1;
+					window.parent.postMessage(showThemeLoader, '*');
+				}
+			} catch (e) {
+			}
+		</script>
+
+
+
+	<script language="JavaScript" type="text/javascript">
+	var global_hash = {
+		AppId : '',
+		perm_view_profiles : '1',
+		forum_embed_url : '',
+		date_format : '3',
+		uid : '244956',
+		enable_pms: 'checked',
+		forum_SSO_login_url : '',
+		less_variables : '',
+		skin : 'angela',
+		max_file_size : '204800',
+		display_time : '1'
+	};
+
+	var	isPostRequest = 0;
+
+	if (typeof wtbx === 'undefined') var wtbx = {};
+	wtbx.cdn = 'https://cdn.websitetoolbox.com';
+	wtbx.wysiwyg = 'both';
+	wtbx.toolbarCompatible = '1';
+	wtbx.uses_smilies ='0';
+	wtbx.isBot = '';
+	wtbx.homePage = 'categories';
+	wtbx.reqreg = 'checked';
+	</script>
+
+
+
+
+	<script src="https://cdn.websitetoolbox.com/js/jquery.min.js" defer></script>
+<script language="JavaScript" type="text/javascript" src="https://cdn.websitetoolbox.com/js/bootstrap.min.js" defer></script>
+<script language="JavaScript" type="text/javascript" src="https://cdn.websitetoolbox.com/js/moment.js" defer></script>
+<script language="JavaScript" type="text/javascript" src="https://cdn.websitetoolbox.com/textarea/forum1/tinymce/tinymce.min.js" defer></script>
+<script language="JavaScript" type="text/javascript" src="https://cdn.websitetoolbox.com/js/mb/i18next_global.js" defer></script>
+<script language="JavaScript" type="text/javascript" src="https://cdn.websitetoolbox.com/js/mb/forum1_global.js" defer></script>
+
+	<link rel="stylesheet" href="https://cdn.websitetoolbox.com/css/bootstrap.css">
+
+
+
+
+
+
+		<link href="https://cdn.websitetoolbox.com/users/tools/4dnkgt/angela.css?1570124045" rel="stylesheet" type="text/css" title="user_css">
+
+
+
+
+	<link href="https://cdn.websitetoolbox.com/css/forum1_global.css" rel="stylesheet">
+
+
+<link rel="manifest" href="/manifest.json">
+
+	<link rel="shortcut icon" type="image/ico" href="https://d28lcup14p4e72.cloudfront.net/244956/4815722/Output_PCgu3E.gif" />
+	<link rel="apple-touch-icon" href="https://d28lcup14p4e72.cloudfront.net/244956/4815722/Output_PCgu3E.gif" />
+
+
+
+
+
+
+			<script type="text/javascript" src="https://cdn.websitetoolbox.com/js/chatbar.js#username=4dnkgt" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="wt-body  nolinks   user-logged-in    "  data-theme="angela">
+	<div id="fb-root"></div>
+	<!--
+	-->
+
+
+
+
+
+
+	<div id="body-wrapper">
+	  <div class="header-wrapper">
+		<header id="forum_header_fixed" class="fixed-header">
+			<div class="container">
+				<div class="nav-main-container col-xs-10">
+					<div class="nav-main">
+						<div class="push-panel">
+							<ul class="dropdown-menu left" role="menu">
+								<li><a href="/">Categories</a></li>
+
+									<li><a href="/register/members">Members</a></li>
+
+
+									<li><a href="/calendar">Calendar</a></li>
+
+							</ul>
+							<a id="links-nav" class="links-nav-toggle">
+								<i class="icon icon-menu"></i>
+							</a>
+							<h3  id="logo_wrapper">
+								<a href="/" id="logo_or_title">
+
+									<span class="">4Dnk's Forum</span>
+								</a>
+							</h3>
+						</div>
+
+
+
+
+						<div class="search-wrapper pull">
+							<span class="glyphicon glyphicon-search"></span>
+							<form name="inlineSearchForm" method="get" action="/search" id="inlineSearchForm">
+								<input id="inline_search_box" type="text" class="search-form form-control form-inline" name="keywords" value="" data-i18n="[placeholder]Search" placeholder="Search">
+								<input type="hidden" id="basicSearch" name="action" value="doSearch">
+								<input type="hidden" name="search" value="true">
+								<input type="hidden" name="member" value="">
+								<input type="hidden" name="searchin" id="searchin" value="Topics">
+								<input id="unfiltered_forums" type="hidden" name="unfiltered_forums" value="">
+								<input type="hidden" id="searchInTopic" name="threadid" value="">
+								<input type="hidden" id="searchInTopicsAction" value="" name="do">
+
+							</form>
+							<div class="btn-group search-category">
+								<button  id="searchContent" class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">
+								<span id="buttonName" data-i18n>Topics</span> <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu left" role="menu">
+
+
+
+									<li><a id="searchTopics"><i class="glyphicon glyphicon-pencil text-muted"></i><span data-i18n>Topics</span></a></li>
+
+										<li><a  id="searchMembers"><i class="glyphicon glyphicon-search"></i><span data-i18n>Members</span></a></li>
+
+									<hr>
+									<li><a href="/search" id="advancedSearch"><i class="glyphicon glyphicon-cog"></i> <span data-i18n>Advanced Search</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+						<ul class="nav pull-right">
+							<li class="pull-right user-panel">
+								<button class="dropdown-toggle" type="button" data-toggle="dropdown">
+									<span class="image-wrapper mini pull-left">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Print Avatar image or link for profile page and pm and post pages -->
+
+
+
+
+
+			<span  class="" style="background:url(https://d28lcup14p4e72.cloudfront.net/244956/4815741/dribbble-bill-shot_2x.png)"></span>
+
+
+
+<!-- End of Print Avatar image -->
+
+
+		<i class="icon icon-crown admin_user help-tooltip" data-i18n="[title]Owner" title="Owner" data-toggle="tooltip" data-placement="bottom"></i>
+
+	<i class="icon icon-shield moderator_user help-tooltip hidden" data-modIcon="1" data-i18n="[title]Moderator" title="Moderator" data-toggle="tooltip" data-placement="bottom"></i>
+
+
+
+
+</span>
+									<span class="caret"></span>
+								</button>
+
+								<ul class="dropdown-menu" role="menu">
+									<span class="pull-left user-avatar-panel">
+										<li>
+											<span class="image-wrapper normal pull-left">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Print Avatar image or link for profile page and pm and post pages -->
+
+
+
+
+
+
+				<a  style="background-image:url(https://d28lcup14p4e72.cloudfront.net/244956/4815741/dribbble-bill-shot_2x.png)" href="/profile/6946725" class="username "
+
+
+					>
+				</a>
+
+
+
+<!-- End of Print Avatar image -->
+
+
+		<i class="icon icon-crown admin_user help-tooltip" data-i18n="[title]Owner" title="Owner" data-toggle="tooltip" data-placement="bottom"></i>
+
+	<i class="icon icon-shield moderator_user help-tooltip hidden" data-modIcon="1" data-i18n="[title]Moderator" title="Moderator" data-toggle="tooltip" data-placement="bottom"></i>
+
+
+
+
+
+											</span>
+										</li>
+									</span>
+									<span class="pull-right user-nav-panel">
+
+
+
+										<strong class="text-block">4DnkGT</strong>
+										<li><a id="user-nav-panel-profile" href="/profile/6946725"><span data-i18n>Profile</span><span class="hidden">4DnkGT</span></a></li>
+										<li><a href="/register?action=preferences&userid=6946725" data-i18n>Settings</a></li>
+										<li><a href="/register/register?edit=1&userid=6946725" data-i18n>Edit Profile</a></li>
+										<li><a href="/search?do=subscribed&action=doSearch" data-i18n>Followed Content</a></li>
+									</span>
+
+										<li><a id="logout" href="/register/logout?userid=6946725" class = "fb_logout"  data-i18n>Log Out</a></li>
+
+								</ul>
+							</li>
+
+
+								<li class="logged-in pull-right">
+									<a class="user-nav-icon dropdown-toggle" type="button" data-toggle="dropdown"><i data-toggle="tooltip" data-placement="bottom" data-i18n="[title]Notifications" title="Notifications" class="glyphicon glyphicon-bell
+										" id="notification"></i>
+										</a>
+									<ul class="dropdown-menu right user-icons-menu hidden" role="menu" id="notification_menu"></ul>
+								</li>
+
+
+								<li class="logged-in pull-right">
+									<a class="user-nav-icon dropdown-toggle" type="button" data-toggle="dropdown">
+
+											<i data-toggle="tooltip" data-placement="bottom" data-i18n="[title]Messages" title="Messages" class="glyphicon glyphicon-comment " id="private_message_notification">
+											</i>
+
+
+									</a>
+									<ul class="dropdown-menu right user-icons-menu hidden" role="menu" id="private_message_dropdown"></ul>
+								</li>
+
+						</ul>
+
+
+				<ul class="nav pull-right wt-pages-links hidden">
+					<a
+
+							href="/post/printadd"
+
+						class="pull-left btn btn-uppercase btn-primary start-new-topic-btn hidden "><span data-i18n>New Topic</span>
+					</a>
+
+					<li class="pull-left search_modal_toggle">
+						<a href="/search" data-toggle="tooltip" data-placement="bottom" title="Search"  data-i18n="[title]Search">
+							<i class="icon icon-search"></i>
+						</a>
+					</li>
+
+
+						<li class="pull-left">
+							<a href="/register/members" data-toggle="tooltip" data-placement="bottom" title="Members" data-i18n="[title]Members">
+								<i class="icon icon-group"></i>
+							</a>
+						</li>
+
+
+
+						<li class="pull-left">
+							<a href="/calendar" data-toggle="tooltip" data-placement="bottom" title="Calendar" data-i18n="[title]Calendar">
+								<i class="icon icon-calendar"></i>
+							</a>
+						</li>
+
+
+
+
+
+
+
+
+
+
+
+
+						<li class="pull-left">
+
+								<a href="https://4dnkgt.discussionchatroom.com/?access_token=gN3MqVmDhzSWlidAB0KK&rememberMe=1" target="_blank" id='anchor_tab_chat'
+
+							data-toggle="tooltip" data-placement="bottom" title="Chat" data-i18n="[title]Chat"><i class="icon icon-comment"></i>
+							</a>
+						</li>
+
+
+
+
+						<li class="pull-left">
+							<a href="/admin" target="_blank" data-toggle="tooltip" data-placement="bottom" data-i18n="[title]Admin" title="Admin" data-i18n="[title]Admin">
+								<i class="glyphicon glyphicon-shield"></i>
+							</a>
+						</li>
+
+				</ul>
+
+				<ul class="nav center-links hidden">
+					<li class="pull-left">
+						<a class="center-toplics-link" href="/latest"><i class="icon icon-list"></i><span data-i18n>Topics</span></a>
+					</li>
+
+						<li class="pull-left bd-wrapper">
+							<a class="center-categories-link" href="/categories"><i class="icon icon-folder"></i><span data-i18n>Categories</span></a>
+							<a class="links-nav-toggle"><i class="icon icon-down-dir"></i></a>
+						</li>
+
+				</ul>
+			</div>
+		</header>
+	</div>
+	<div id="loading_msg" class="loading-top hidden">
+		<p data-i18n>Loading...</p>
+	</div>
+	<div id="ajax-msg-top" class="ajax-msg-top hidden"><p></p></div>
+	<noscript>
+		<br/><div class="alert alert-danger text-center">Note: Your browser does not have JavaScript enabled. Many features may not work properly without it. Please enable JavaScript in your browser settings.</div>
+	</noscript>
+	<div id="slide-panel">
+
+
+<ul class="slide-panel-content">
+
+
+		<div class="category-dropdown-toggle hidden"><i id="category-dropdown-toggle" data-toggle="collapse" class="toggleable glyphicon icon-right-dir"> </i><a href="/categories" data-i18n>Categories</a></div>
+
+			<ul id="forums_toggle_link" class="panel-collapse collapse in">
+				<li><i data-toggle="collapse"  class="toggleable glyphicon icon-right-dir"> </i><a href="/categories" data-i18n>Categories</a>
+
+
+
+
+
+				<ul id="757403" class="panel-collapse collapse">
+					<li>
+						<a href="/?forum=757403">
+						News</a>
+
+					</li></ul>
+
+
+
+
+				<ul id="757404" class="panel-collapse collapse">
+					<li>
+						<a href="/?forum=757404">
+						General</a>
+
+					</li></ul>
+
+
+
+
+				<ul id="757405" class="panel-collapse collapse">
+					<li>
+						<a href="/?forum=757405">
+						Moderators Only</a>
+
+					</li></ul>
+
+
+
+
+	</li>
+	</ul>
+
+
+
+	<li id="latest_topics_show"><a href="/latest"><small class="glyphicon glyphicon-pencil text-muted">&nbsp;</small> <span data-i18n>Topics</span></a></li>
+	<hr>
+	<li id="search_link" class="push search_modal_toggle"><a href="/search"><small class="glyphicon glyphicon-search text-muted">&nbsp;</small> <span data-i18n>Search</span></a></li>
+
+		<li id="members_list_show"><a href="/register/members"> <small class="glyphicon glyphicon-user text-muted">&nbsp;</small> <span data-i18n>Members</span></a></li>
+
+
+
+
+
+			<li id="calenders_show"><a href="/calendar"><small class="glyphicon glyphicon-calendar text-muted">&nbsp;</small> <span data-i18n>Calendar</span></a></li>
+
+
+
+
+
+
+
+
+
+		<li>
+
+				<a href="https://4dnkgt.discussionchatroom.com/?access_token=gN3MqVmDhzSWlidAB0KK&rememberMe=1" target="_blank" id='anchor_tab_chat'>
+
+			<small class="glyphicon glyphicon-comment text-muted">&nbsp;</small> <span data-i18n>Chat</span>
+			</a>
+		</li>
+
+
+
+
+
+		<li id="admin_show"><a href="/admin" target="_blank"><small class="icon icon-shield text-muted">&nbsp;</small> <span data-i18n>Admin</span></a></li>
+
+
+
+
+	<a id="startTopic"
+
+			href="/post/printadd"
+
+		 class="pull-right btn btn-uppercase btn-primary hidden start-new-topic-btn "><span data-i18n>New Topic</span></a>
+</ul>
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+	<!--left side Add-->
+
+	<!--End left side Add-->
+    <div class="main-container">
+
+			<div class="header-image container"><div id="header_image"></div></div>
+
+
+		<!-- Private msg dialog -->
+
+
+			<div class="modal fade" id="pmessage_modal" tabindex="0" role="dialog" aria-hidden="true" data-old_fixed_dialog="0"></div>
+
+
+
+			<div class="modal fade" id="pmessageNotify_modal" tabindex="0" role="dialog" aria-hidden="true">
+				<div class="modal-dialog enable-messages">
+					<div class="modal-content">
+						<div class="modal-body">
+							<h3 class="text-center"><span data-i18n="">Messages are turned off. Enable them to send or receive messages.</span></h3><br>
+							<span class="align-center text-center">
+								<a class="btn btn-primary" id="enableMessages" data-userid="" data-username="">Enable Messages</a>
+								<a class="btn btn-subtle" id="bootstrap_close_pm_dialog">Cancel</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		<div id="bootstrap-alert-box-modal" class="modal fade layer-to-front">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" data-i18n>Modal title</h4>
+			  </div>
+			  <div class="modal-body">
+				<p class="text-danger"></p>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal" data-i18n>OK</button>
+			  </div>
+			</div><!-- modal-content -->
+		  </div><!-- modal-dialog -->
+		</div><!-- modal -->
+		<!-- Content -->
+
+
+
+		<div id="announcementHeader" class="announcement-header container clearfix ">
+			<div id="announcementContent">
+				<span style="font-size: 36px;">Welcome to 4Dnk's Forum</span>
+			</div>
+
+		</div>
+
+
+
+<div class="container content-panel forum-list wt-categories">
+	<div role="tabpanel" class="tab-pane active" id="forums">
+
+
+
+
+
+
+			<a id="startTopic"
+
+				href="/post/printadd"
+
+			 class="pull-right btn btn-uppercase btn-primary start-new-topic-btn "><span data-i18n>New Topic</span></a>
+
+
+			<a href="/?action=markread" id="markCategoryAsRead" data-toggle="tooltip"  data-placement="bottom" class="pull-right" title="Mark all categories as read" data-i18n="[title]markAllCatoryAsRead"><span class="icon icon-sweep"></span></a>
+
+	  <ul class="nav nav-tabs" role="tablist">
+		<li role="presentation"><a href="/latest" data-i18n>Topics</a></li>
+		<li role="presentation" class="active"><a href="#forums" aria-controls="forums" role="tab" data-toggle="tab" data-i18n>Categories</a></li>
+	  </ul>
+	  <div class="tab-content">
+
+
+		<div class="panel panel-default">
+
+			<div class="panel-body table-responsive">
+
+
+					<ul>
+
+
+
+
+<!-- forum row start -->
+<li id="forum_757403" class="col-xs-12  ">
+	<span class="columns-wrapper">
+		<span class="col-xs-7 col-md-8 col-lg-9">
+			<h3>
+
+
+
+				<a href="/?forum=757403" ><span class="forum-title">News</span></a>
+
+
+			</h3>
+
+				<p data-i18n>Community News & Announcements</p>
+
+		</span>
+		<span class="col-xs-5 col-md-4 col-lg-3">
+
+
+
+				<span class="forum-count pull-right">
+
+
+
+
+
+
+
+
+
+					<a data-toggle="tooltip" data-i18n="[title]Topic" title="Topic" data-placement="bottom" class="help-tooltip TopicsCount"><i class="glyphicon glyphicon-pencil"></i>1</a>
+					<a data-toggle="tooltip" data-i18n="[title]Post" title="Post" data-placement="bottom" class="help-tooltip PostsCount"><i class="icon glyphicon-comment-empty"></i>1</a>
+
+						<a title="Hide this category" data-i18n="[title]Hide this category"  data-forumid="757403" href="javascript:void(0)" class="text-muted close-row" data-toggle="tooltip"><i data-original-title="" class="glyphicon glyphicon-remove"></i></a>
+
+				</span>
+
+
+
+
+
+
+<!-- forum restriction start -->
+
+	<span class="last-post pull-right">
+
+
+
+
+
+
+
+
+
+
+
+
+					<i class="text-muted pull-left">
+						<a href="/post/staff-applications-10288416?goto=lastpost" class="latest-topic">Staff Applications</a>
+						<span title="">
+							<time datetime="1570124835" is="time-ago" >1570124835</time>
+						</span>
+						<span data-i18n>by</span>
+
+
+								<a    href="/profile/6946725"  class='username usergroup1274514'  data-placement="bottom">4DnkGT</a>
+
+
+					</i>
+
+
+
+					<span class='image-wrapper mini pull-right '>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Print Avatar image or link for profile page and pm and post pages -->
+
+
+
+
+
+
+				<a  style="background-image:url(https://d28lcup14p4e72.cloudfront.net/244956/4815741/dribbble-bill-shot_2x.png)" href="/profile/6946725" class="username "
+
+
+					>
+				</a>
+
+
+
+<!-- End of Print Avatar image -->
+
+
+		<i class="icon icon-crown admin_user help-tooltip" data-i18n="[title]Owner" title="Owner" data-toggle="tooltip" data-placement="bottom"></i>
+
+	<i class="icon icon-shield moderator_user help-tooltip hidden" data-modIcon="1" data-i18n="[title]Moderator" title="Moderator" data-toggle="tooltip" data-placement="bottom"></i>
+
+
+
+
+
+					</span>
+
+
+	</span>
+
+<!-- forum restriction end -->
+
+
+		</span>
+	</span>
+</li>
+<!-- forum row end -->
+
+
+
+
+
+
+
+
+
+
+<!-- forum row start -->
+<li id="forum_757404" class="col-xs-12  ">
+	<span class="columns-wrapper">
+		<span class="col-xs-7 col-md-8 col-lg-9">
+			<h3>
+
+
+
+				<a href="/?forum=757404" ><span class="forum-title">General</span></a>
+
+
+			</h3>
+
+				<p data-i18n>General Discussion</p>
+
+		</span>
+		<span class="col-xs-5 col-md-4 col-lg-3">
+
+
+
+				<span class="forum-count pull-right">
+
+
+
+
+
+					<a data-toggle="tooltip" data-i18n="[title]Topics" title="Topics" data-placement="bottom" class="help-tooltip TopicsCount"><i class="glyphicon glyphicon-pencil"></i>0</a>
+					<a data-toggle="tooltip" data-i18n="[title]Posts" title="Posts" data-placement="bottom" class="help-tooltip PostsCount"><i class="icon glyphicon-comment-empty"></i>0</a>
+
+						<a title="Hide this category" data-i18n="[title]Hide this category"  data-forumid="757404" href="javascript:void(0)" class="text-muted close-row" data-toggle="tooltip"><i data-original-title="" class="glyphicon glyphicon-remove"></i></a>
+
+				</span>
+
+
+
+
+
+
+<!-- forum restriction start -->
+
+	<span class="last-post pull-right">
+
+
+		<i class="text-muted pull-left" data-i18n>No posts</i>
+
+	</span>
+
+<!-- forum restriction end -->
+
+
+		</span>
+	</span>
+</li>
+<!-- forum row end -->
+
+
+
+
+
+
+
+
+
+
+<!-- forum row start -->
+<li id="forum_757405" class="col-xs-12  ">
+	<span class="columns-wrapper">
+		<span class="col-xs-7 col-md-8 col-lg-9">
+			<h3>
+
+
+
+				<a href="/?forum=757405" ><span class="forum-title">Moderators Only</span></a>
+
+
+			</h3>
+
+				<p data-i18n>A private discussion area only viewable by moderators.</p>
+
+		</span>
+		<span class="col-xs-5 col-md-4 col-lg-3">
+
+
+
+				<span class="forum-count pull-right">
+
+
+
+
+
+					<a data-toggle="tooltip" data-i18n="[title]Topics" title="Topics" data-placement="bottom" class="help-tooltip TopicsCount"><i class="glyphicon glyphicon-pencil"></i>0</a>
+					<a data-toggle="tooltip" data-i18n="[title]Posts" title="Posts" data-placement="bottom" class="help-tooltip PostsCount"><i class="icon glyphicon-comment-empty"></i>0</a>
+
+						<a title="Hide this category" data-i18n="[title]Hide this category"  data-forumid="757405" href="javascript:void(0)" class="text-muted close-row" data-toggle="tooltip"><i data-original-title="" class="glyphicon glyphicon-remove"></i></a>
+
+				</span>
+
+
+
+
+
+
+<!-- forum restriction start -->
+
+	<span class="last-post pull-right">
+
+
+		<i class="text-muted pull-left" data-i18n>No posts</i>
+
+	</span>
+
+<!-- forum restriction end -->
+
+
+		</span>
+	</span>
+</li>
+<!-- forum row end -->
+
+
+					</ul>
+
+			</div>
+		</div>
+	</div>
+	</div>
+
+		<div id="hidden_forum" class="hidden">
+
+
+
+			<span class="text-block" id="hidden-info"><span id="hidden_forums_count">0</span> <span id="hidden_forums_text" data-i18n="category is"> category is</span> <span data-i18n>being hidden</span> · <a title="" data-original-title="" data-toggle="modal" href="#filter-modal" id="modify_forum_filter" data-i18n>Modify filter</a></span>
+		</div>
+
+</div>
+
+	<div class="modal fade" id="filter-modal" tabindex="0" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		  <h4 class="modal-title" id="online-modal-label" data-i18n>Filter by category</h4>
+		</div>
+		<div class="modal-body">
+			<form method="post" action="/forums" name="filtered">
+			  <div class="alert alert-info text-center" role="alert" id="alertMsg" data-i18n>Deselect the categories you would like to stop hiding.</div>
+			  <div class="clearfix">
+				<div class="col-sm-12 dropdown open" >
+				  <div id="forum_tree"></div>
+				</div>
+			  </div>
+			  <input type="hidden" name="filtered_forumids" value="" id="filtered_forumids">
+			  <input type="hidden" name="action" id="forum_filter" value="apply_forum_filter" >
+			  <input type="hidden" name="forum" value="" >
+			  <input type="hidden" name="jump" value="" id="jump">
+			  <a class="btn btn-primary pull-left cleared" id="apply_forum_filter" data-showas="" data-i18n>Apply Filter</a>
+			  <a class="btn btn-subtle pull-left bd-wrapper" id="clear_forum_filter" data-i18n>Clear Filter</a>
+		  </form>
+		</div>
+	  </div>
+	</div>
+</div>
+
+
+
+
+
+<div class="modal fade" id="email-modal" tabindex="0" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="email_member" data-email-member="">Email </h4>
+			</div>
+			<div class="modal-body">
+
+
+					<div class="alert alert-danger text-center" id="email_error_msg" role="alert">
+					</div>
+
+					<form class="form-horizontal" role="form" id="PostEmail" method="post" action="/email" name="PostEmail">
+						<div id="showEmail" class="form-group hidden">
+							<label for="message-to" class="col-sm-3 control-label" data-i18n>To</label>
+							<div class="col-sm-7">
+								<a id="email-id" href="mailto:"></a>
+								<small class="text-muted" data-i18n>Email addresses are only visible to administrators.</small>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<label for="message-subj" class="col-sm-3 control-label">
+								<span data-i18n>Subject</span>
+							</label>
+							<div class="col-sm-7">
+								<input type="text" name="subject" id="email_subject" value="" class="form-control" data-i18n="[placeholder]Email Subject" placeholder="Email Subject">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="message-body" class="col-sm-3 control-label">
+								<span data-i18n>Message</span>
+							</label>
+							<div class="hdx"><textarea name="comments_0" id="sendemail_comments_0" cols="55" rows="15"></textarea></div>
+							<div class="col-sm-7">
+								<textarea class="form-control" contentEditable="true" id="email_message" name="message"></textarea>
+								<small class="text-muted" data-i18n>By using this form, your email address will become available to the user who you are emailing.</small>
+							</div>
+						</div>
+
+
+							<input type="hidden" name="id" id="email_threadid" value="">
+							<input type="hidden" name="forumid" id="forumids_id" value="">
+							<input type="hidden" name="pid" id="email_pid" value="F">
+							<input type="hidden" name="referral" id="referralURL" value="">
+
+						<input type="hidden" name="cist" id="cist" value="">
+					</form>
+					<div class="modal-footer" id="emailFooter">
+						<div class="pull-right">
+							<button type="submit" id="send_email_button" class="btn btn-primary" data-loading-text="Logging in..."  data-i18n>Send</button>
+						</div>
+					</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+		<div class="hidden" id="popover_content">
+			<div class="popover hovercard" role="tooltip">
+				<div class="arrow"></div>
+				<h3 class="popover-title"></h3>
+				<div class="popover-content">
+				</div>
+			</div>
+		</div>
+
+
+
+	<script type="text/javascript">
+			var smilie_user = '4dnkgt';
+	</script>
+
+	<!-- Emojis popover -->
+
+		<div class="mce-popover hidden" id="emoticonsList">
+			<div class="tabbable" tabindex="0">
+				<nav id="scrollSpyEmojis" class="scrollSpy navbar navbar-default navbar-static" role="navigation">
+					<div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+						<ul id="tablist" class="nav navbar-nav">
+							<li class= "active"><a href="#emoji-tabs-smilies" id="emoji-tab-smilies"></a></li>
+							<li><a href="#emoji-tabs-animals" id="emoji-tab-animals"></a></li>
+							<li><a href="#emoji-tabs-food" id="emoji-tab-food"></a></li>
+							<li><a href="#emoji-tabs-symbols" id="emoji-tab-symbols"></a></li>
+							<li><a href="#emoji-tabs-transport" id="emoji-tab-transport"></a></li>
+							<li><a href="#emoji-tabs-alphabetic" id="emoji-tab-alphabetic"></a></li>
+							<li><a href="#emoji-tabs-sport" id="emoji-tab-sport"></a></li>
+
+						</ul>
+					</div>
+				</nav>
+				<div id="scrollEmojiContent" data-spy="scroll" data-target="#scrollSpyEmojis" data-offset="0" >
+					<div class="tab-pane section" id="emoji-tabs-smilies">
+							<h4>Smileys & People</h4>
+							<ul class="emojiListContent" id="listEmoji_smilies"></ul>
+					</div>
+					<div class="tab-pane section" id="emoji-tabs-animals">
+							<h4>Animals</h4>
+							<ul class="emojiListContent" id="listEmoji_animals"></ul>
+					</div>
+					<div class="tab-pane section" id="emoji-tabs-food">
+							<h4>Food & Drink</h4>
+							<ul class="emojiListContent" id="listEmoji_food"></ul>
+					</div>
+					<div class="tab-pane section" id="emoji-tabs-symbols">
+							<h4>Symbols</h4>
+							<ul class="emojiListContent" id="listEmoji_symbols"></ul>
+					</div>
+					<div class="tab-pane section" id="emoji-tabs-transport">
+							<h4>Travel & Places</h4>
+							<ul class="emojiListContent" id="listEmoji_transport"></ul>
+					</div>
+					<div class="tab-pane section" id="emoji-tabs-alphabetic">
+							<h4>Alphabet</h4>
+							<ul class="emojiListContent" id="listEmoji_alphabetic"></ul>
+					</div>
+					<div class="tab-pane section" id="emoji-tabs-sport">
+							<h4>Activity</h4>
+							<ul class="emojiListContent" id="listEmoji_sport"></ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	<!-- End Emojis popover -->
+
+	<!-- Insert Video Modal -->
+	<div class="modal fade" id="video_popup" tabindex="0" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" id="bootstrap_close_insert_url_modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="online-modal-label" data-i18n>Insert Video</h4>
+				</div>
+				<div class="modal-body">
+					<div id="video_inner_content">
+						<label for="enter_video" class="control-label">Enter your video clip URL below:</label>
+						<div class="form-group">
+							<input id="dialog_input_value" class="form-control" size=51 type="text" value="http://" >
+						</div>
+						<div class="form-group">
+							<span class="text-muted">Example: <a target="_blank" href="http://www.youtube.com" >http://www.youtube.com/watch?v=1234567</a></span>
+						</div>
+						<div id="video_list" class="form-group">
+							<p><b>Supported videos include:</b></p>
+							<a target="_blank" href="http://www.youtube.com">YouTube,</a>&nbsp;
+							<a target="_blank" href="http://www.vimeo.com">Vimeo,</a>&nbsp;
+							<a target="_blank" href="http://www.dailymotion.com">Dailymotion,</a>&nbsp;
+							<a target="_blank" href="http://www.metacafe.com">Metacafe,</a>&nbsp;
+							<a target="_blank" href="https://www.facebook.com">Facebook</a>&nbsp;
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="pull-right">
+						<a  id="insert_video_url" class="btn btn-primary" data-i18n>Insert URL</a>
+						<button class="btn btn-subtle bd-wrapper" id="bootstrap_close_insert_url" data-i18n>Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Insert Video Modal -->
+	<div id="code_popup" class="modal fade">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" id="bootstrap_close_insert_code_modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"
+					id="online-modal-label" data-i18n>Insert Code</h4>
+				</div>
+				<!-- dialog body -->
+				<div class="modal-body">
+					<p data-i18n>Please paste your code into the box below:</p>
+					<div class="form-group">
+						<textarea id="dialog_input_code_value" rows="4" cols="50" class="form-control"></textarea>
+					</div>
+				</div>
+				<!-- dialog buttons -->
+				<div class="modal-footer">
+						<button type="button" id='code_button_tce' class="btn btn-primary" data-i18n>OK</button>
+					<button type="button" class="btn btn-subtle" id="bootstrap_close_insert_code" data-i18n>Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Source Code Modal -->
+	<div id="source_code_popup" class="modal fade">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" id="bootstrap_close_source_code_modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="online-modal-label" data-i18n>Source Code</h4>
+				</div>
+				<!-- dialog body -->
+				<div class="modal-body">
+					<div class="form-group">
+						<textarea id="source_code" rows="18" cols="50" class="form-control"></textarea>
+					</div>
+				</div>
+				<!-- dialog buttons -->
+				<div class="modal-footer">
+					<button type="button" id="update_source_code" class="btn btn-primary" data-i18n>OK</button>
+					<button type="button" class="btn btn-subtle" id="bootstrap_close_source_code" data-i18n>Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="containerCustomEmoji" class="hidden"><ul id="customEmoji"></ul></div>
+	<div id="taggedUserLink" class="hidden"><a class="notifiedUser username" data-toggle="popover" data-placement="bottom"></a>&nbsp;</div>
+	<ul id="taggedUserAvatar" class="hidden"><li><a><span id="taggedUsername"> </span><span class="image-wrapper mini pull-left"><span id="taggedUser" class="pull-left" ></span></span></a></li></ul>
+
+
+
+	</div><!-- Close .main-container from header.tpl -->
+
+	<div id="hover_card_content"></div>
+
+	    <script type="text/javascript">
+		    var vglnk = { api_url: '//api.viglink.com/api',
+			    key: 'ccc2217bc2b75c4bdf5f7e57267f0464' };
+
+		    (function(d, t) {
+			    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+			    s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+			    '//cdn.viglink.com/api') + '/vglnk.js';
+			    var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+		    }(document, 'script'));
+	    </script>
+
+
+
+
+
+
+
+
+	<div class="footer-wrapper">
+		<div class="footer-content hidden">
+			<div class="container">
+				<div class="dropdown pull-left" id="language-selector">
+					<a class="dropdown-toggle" data-toggle="dropdown" type="button" title="" >
+						<span class="glyphicon glyphicon-globe"></span><b class="bd-wrapper" id="selectedLanguage">English</b> <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu left top check-select" role="menu" id="languageDropdown">
+						<li>
+							<ul class="dropdown-scrollable-content">
+								<li><a data-language="id"><i></i><span class="pull-left">Bahasa Indonesia</span></a></li>
+								<li><a data-language="de"><i></i><span class="pull-left">Deutsch</span></a></li>
+								<li><a data-language="en"><i></i><span class="pull-left">English</span></a></li>
+								<li><a data-language="es"><i></i><span class="pull-left">Español</span></a></li>
+								<li><a data-language="fr"><i></i><span class="pull-left">Français</span></a></li>
+								<li><a data-language="nl"><i></i><span class="pull-left">Netherlands</span></a></li>
+								<li><a data-language="nb"><i></i><span class="pull-left">Norsk</span></a></li>
+								<li><a data-language="pt"><i></i><span class="pull-left">Português</span></a></li>
+								<li><a data-language="ru"><i></i><span class="pull-left">русский</span></a></li>
+								<li><a data-language="sv"><i></i><span class="pull-left">Swedish</span></a></li>
+								<li><a data-language="vi"><i></i><span class="pull-left">Tiếng Việt</span></a></li>
+								<li><a data-language="zh"><i></i><span class="pull-left">中文</span></a></li>
+								<li><a data-language="ja"><i></i><span class="pull-left">日本語</span></a></li>
+								<li><a data-language="ar"><i></i><span class="pull-left">عربى</span></a></li>
+								<li><a data-language="ko"><i></i><span class="pull-left">한국어</span></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+
+<div id="onlineUsersPopover" class="pull-left">
+	<a id="onlineUsers" data-toggle="popover" data-placement="top">
+
+
+				<span class="online"></span>1&nbsp;<span data-i18n>user online</span><span class="caret"></span>
+
+
+	</a>
+	<div id="onlineUsersList" class="hidden">
+		<div id="onlineUsersContent">
+
+
+					<h5 class="col-xs-12">
+						1&nbsp;<span data-i18n>Member</span>
+					</h5>
+					<ul class="col-xs-12">
+						<li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+								<span class="image-wrapper mini pull-left">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Print Avatar image or link for profile page and pm and post pages -->
+
+
+
+
+
+
+				<a  style="background-image:url(https://d28lcup14p4e72.cloudfront.net/244956/4815741/dribbble-bill-shot_2x.png)" href="/profile/6946725" class="username "
+
+
+					>
+				</a>
+
+
+
+<!-- End of Print Avatar image -->
+
+
+		<i class="icon icon-crown admin_user help-tooltip" data-i18n="[title]Owner" title="Owner" data-toggle="tooltip" data-placement="bottom"></i>
+
+	<i class="icon icon-shield moderator_user help-tooltip hidden" data-modIcon="1" data-i18n="[title]Moderator" title="Moderator" data-toggle="tooltip" data-placement="bottom"></i>
+
+
+
+
+
+								</span>
+								<span class="right-side pull-left">
+
+									<a class="username text-muted" href="/profile/6946725">
+										4DnkGT
+									</a>
+								</span>
+							</li>
+
+					</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+		<script>
+		function loadSentry () {
+			if (typeof Sentry == 'undefined') {
+				return;
+			}
+			Sentry.init({
+				dsn: 'https://0d295bbefc5d4ec4ab0e2f172e8b4bf6@sentry.io/1315014',
+				beforeSend(event, hint) {
+					if (typeof wtbx.defaultLetterAvatar !== 'undefined' && hint && hint.originalException) {
+						var hash = wtbx.defaultLetterAvatar.getHash(hint.originalException);
+						if (hash) event.fingerprint = [hash.toString()];
+					}
+					return event;
+				},
+				blacklistUrls: [
+					/extensions\/|translate/i,
+					/^(chrome|moz-extension):\/\//i
+				]
+			});
+			Sentry.configureScope((scope) => {
+				scope.setUser({
+					"email": "",
+					"username": "4dnkgt",
+					"id": "244956"
+				});
+			});
+		}
+		</script>
+		<script src="https://browser.sentry-cdn.com/5.3.0/bundle.min.js" crossorigin="anonymous" onload="loadSentry();" async></script>
+
+
+	<!--Below elemt used to set iframe height for down-sizing-->
+	<div data-iframe-height style="position: fixed" id="forumResizerElement"></div>
+
+
+ </body>
+</html>
+<!-- end page -->
